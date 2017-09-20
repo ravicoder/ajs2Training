@@ -1,0 +1,33 @@
+<h1>Employee management</h1>
+
+<div [hidden]="showAddForm">
+    <input type="button" value="Add employee" (click)="showAddEmployee()" />
+    <table>
+        <tr>
+            <th>Employee Name</th>
+            <th>Employee Salary</th>
+        </tr>
+        <tr *ngFor="let x of employees">
+            <td>{{x.empName}}</td>
+            <td>{{x.salary}}</td>
+        </tr>
+    </table>
+</div>
+
+<div [hidden]="!showAddForm">
+    <b>Add employee here:</b>
+    <table>
+        <tr>
+            <td>Name</td>
+            <td><input type="text" /></td>
+        </tr>
+        <tr>
+            <td>Salary</td>
+            <td><input type="text" /></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="Save" (click)="saveEmployee()" /></td>
+            <td><input type="button" value="Cancel" (click)="cancel()" /></td>
+        </tr>
+    </table>
+</div>
