@@ -1,0 +1,13 @@
+<div>
+    <input type="button" value="Add employee" (click)="showAddEmployee()" />
+    <table>
+        <tr>
+            <th>Employee Name</th>
+            <th>Employee Salary</th>
+        </tr>
+        <tr *ngFor="let x of employees">
+            <td>{{x.empName}}</td>
+            <td>{{x.salary}}</td>
+        </tr>
+    </table>
+</div>
